@@ -1,0 +1,17 @@
+import os
+def changeName(path,cname):
+    i=0
+    for filename in os.listdir(path):
+        os.rename(path+filename,path+str(cname)+str(i)+'.tif')
+        i+=1
+
+changeName('/Users/SNUH/Desktop/유일한/test/','asdf')
+
+def makedirectory(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print('error:make directory'+ directory)
+
+makedirectory('/Users/SNUH/Desktop/유일한/test2')
