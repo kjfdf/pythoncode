@@ -1,0 +1,11 @@
+def read_txt(filename,sep=""):
+    str=""
+    file=open(filename,'r')
+    str=file.readlines()
+    for i in range(0,len(str)):
+        str[i]=str[i].strip().split(sep)
+    return(str)
+    file.close()
+
+l1=read_txt("/Users/SNUH/Desktop/유일한/test2/ALS.txt",',')
+print(l1)
