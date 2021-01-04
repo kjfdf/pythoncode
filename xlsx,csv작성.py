@@ -26,3 +26,10 @@ for file in files2:
         print(line)
     file.close()
 
+# csv파일 쓰기
+for file in files2:
+    file=open(file,'w',encoding='utf-8',newline='') #newline= 을 지정안하면 각 라인 뒤에 빈라인이 추가됨
+    file_a=csv.writer(file)
+    file_a.writerow([1,"aaa",False])
+    file_a.writerow([2,"bbb",True])
+    file_a.close()
