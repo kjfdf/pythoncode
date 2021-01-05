@@ -89,3 +89,4 @@ from tika import parser
 rawText=parser.from_file("C:/Users/SNUH/Desktop/유일한/논문/2018년 고혈압 진료지침.pdf")
 rawList=rawText['content'].splitlines()
 print(rawList)
+# print('\n'.join(rawList))
