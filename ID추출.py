@@ -2,9 +2,9 @@ import os.path
 import glob
 import pandas as pd
 
-list=glob.glob("D:/EMG머신러닝연구/윤이나 학생 자료/EMG_data/figure4/*.txt")
-data=pd.read_csv("D:/EMG머신러닝연구/윤이나 학생 자료/EMG_data/brushedData2/fileName.csv")
-del list[-2:]
+list=glob.glob("D:/EMG머신러닝연구/윤이나 학생 자료/EMG_data/figure5/*.txt")
+data=pd.read_csv("D:/EMG머신러닝연구/윤이나 학생 자료/EMG_data/brushedData2/MoreSelection.csv")
+# del list[-2:]
 # print(list)
 id_total=[]
 label_total=[]
@@ -22,4 +22,4 @@ label_total=pd.DataFrame(label_total)
 # print(id_total,label_total)
 data.insert(0,"ID",id_total)
 data.insert(1,"label",label_total)
-data.to_csv("D:/EMG머신러닝연구/윤이나 학생 자료/EMG_data/brushedData2/EMGdata.csv")
+data.to_csv("D:/EMG머신러닝연구/윤이나 학생 자료/EMG_data/brushedData2/MoreSelection2.csv")
